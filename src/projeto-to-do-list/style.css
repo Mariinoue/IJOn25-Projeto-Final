@@ -1,0 +1,15 @@
+#to-do-container {
+    background: url(assets/to-do-list-pink.png) no-repeat fixed;
+    background-size: cover;
+    min-height: 100vh; 
+    margin: 0px auto;
+    text-align: center;
+}   
+
+
+/* div {
+   
+  } */
+  input {
+    width: 20%;
+  }
