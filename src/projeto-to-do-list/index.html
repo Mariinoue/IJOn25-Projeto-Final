@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Minhas tarefinhas</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <div id="to-do-container">
-     
-            <input type="text" />
-            <button>Add Task</button>
-            <ul class="tasks"></ul>
-       
-
+      <input type="text" id="new-item" placeholder="Qual será a tarefa nova?" />
+      <button id="add-button">Nova tarefa</button>
+      <ul id="todo-list"></ul>
     </div>
-
-    <script src="to-do-list.js"></script>
-
-</body>
-
+    <script src="dist/index.js"></script>
+  </body>
 </html>
