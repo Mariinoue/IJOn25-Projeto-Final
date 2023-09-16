@@ -17,7 +17,6 @@ var List = /*#__PURE__*/function () {
     key: "addTodoItem",
     value: function addTodoItem(todoItem) {
       this.todoItems.push(todoItem);
-      console.log("todoItem populando array", this.todoItems);
     }
   }, {
     key: "removeTodoItem",
@@ -25,13 +24,10 @@ var List = /*#__PURE__*/function () {
       this.todoItems = this.todoItems.filter(function (word) {
         return word !== todoItem;
       });
-      console.log("removendo todoItems");
-      console.log("removendo", this.todoItems);
     }
   }, {
     key: "getTodoItems",
     value: function getTodoItems() {
-      console.log("getTodoItems", this.todoItems);
       return this.todoItems;
     }
   }]);
@@ -42,24 +38,19 @@ var todoListElement = document.getElementById("todo-list");
 var newItemInput = document.getElementById("new-item");
 var addButton = document.getElementById("add-button");
 addButton.addEventListener("click", function () {
-  console.log("adicionado");
   var newItem = newItemInput.value.trim();
   if (newItem !== "") {
     todoList.addTodoItem(newItem);
     newItemInput.value = "";
-    console.log("TodoIteminha - botao add TodoItem");
     renderTodoList();
   }
 });
 todoListElement.addEventListener("click", function (event) {
-  if (event.target.tagName === "BUTTON") {
+  if (event.target.tagName === "LIXO") {
     var todoItem = event.target.previousSibling.textContent;
     todoList.removeTodoItem(todoItem);
-    console.log("botao apagar TodoItem", todoItem);
   }
 });
-
-//  ------essa funçao vem da outra class
 function renderTodoList() {
   todoListElement.innerHTML = "";
   var todoItems = todoList.getTodoItems();
@@ -67,9 +58,69 @@ function renderTodoList() {
     var li = document.createElement("li");
     li.textContent = todoItem;
     var deleteButton = document.createElement("button");
-    deleteButton.textContent = "BUTTON";
+    deleteButton.textContent = "LIXO";
     li.appendChild(deleteButton);
     todoListElement.appendChild(li);
   });
 }
 renderTodoList();
+var PomodoroTimer = /*#__PURE__*/function () {
+  function PomodoroTimer(workDuration, breakDuration) {
+    _classCallCheck(this, PomodoroTimer);
+    this.workDuration = workDuration;
+    this.breakDuration = breakDuration;
+    this.interval = null;
+    this.seconds = workDuration * 60;
+    this.isWorking = true;
+  }
+  _createClass(PomodoroTimer, [{
+    key: "start",
+    value: function start() {
+      var _this = this;
+      if (!this.interval) {
+        this.interval = setInterval(function () {
+          _this.tick();
+        }, 1000);
+      }
+    }
+  }, {
+    key: "stop",
+    value: function stop() {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.stop();
+      this.seconds = this.isWorking ? this.workDuration * 60 : this.breakDuration * 60;
+      this.updateDisplay();
+    }
+  }, {
+    key: "tick",
+    value: function tick() {
+      if (this.seconds > 0) {
+        this.seconds--;
+        this.updateDisplay();
+      } else {
+        this.isWorking = !this.isWorking;
+        this.seconds = this.isWorking ? this.workDuration * 60 : this.breakDuration * 60;
+        this.updateDisplay();
+      }
+    }
+  }, {
+    key: "updateDisplay",
+    value: function updateDisplay() {
+      var timerDisplay = document.getElementById("timer-display");
+      timerDisplay.textContent = "".concat(this.isWorking ? "Foco" : "Break", " Time: ").concat(this.formatTime(this.seconds));
+    }
+  }, {
+    key: "formatTime",
+    value: function formatTime(seconds) {
+      var minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
+      var remainingSeconds = (seconds % 60).toString().padStart(2, "0");
+      return "".concat(minutes, ":").concat(remainingSeconds);
+    }
+  }]);
+  return PomodoroTimer;
+}();

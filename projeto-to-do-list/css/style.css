@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+
+body {
+  height: 100%;
+
+}
+
+
+
+#to-do-container {
+    background: url(../projeto-to-do-list/assets/to-do-list-pink.png) no-repeat fixed;
+    background-size: cover;
+    min-height: 100vh; 
+    margin: 0px auto;
+    text-align: center;
+    overflow-y: hidden;
+}   
+
+
+
+
+  #new-task{
+   position: relative;
+    padding: 100px 20px;
+
+   
+}
+#new-item{
+    width: 75%;
+    height: 20px;
+    padding: 12px;
+    /* color: #0d75ec; */
+    font-weight: 500;
+    background-color: floralwhite;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+}
+
+#newtask input:focus{
+    outline: none;
+    border-color: #0d75ec;
+}

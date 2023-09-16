@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.List = void 0;
+exports["default"] = void 0;
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -21,7 +21,7 @@ var List = /*#__PURE__*/function () {
     key: "addTodoItem",
     value: function addTodoItem(todoItem) {
       this.todoItems.push(todoItem);
-      console.log("todoItem populando array", this.todoItems);
+      console.table("todoItem populando array", this.todoItems);
     }
   }, {
     key: "removeTodoItem",
@@ -29,26 +29,24 @@ var List = /*#__PURE__*/function () {
       this.todoItems = this.todoItems.filter(function (word) {
         return word !== todoItem;
       });
-      console.log("removendo todoItems");
-      console.log("removendo", this.todoItems);
     }
   }, {
     key: "getTodoItems",
     value: function getTodoItems() {
-      console.log("getTodoItems", this.todoItems);
+      console.table("getTodoItems", this.todoItems);
       return this.todoItems;
     }
   }]);
   return List;
-}(); //module.exports = List;
-// const listinha = new List();
-// listinha.addTodoItem("Banho e tosa");
-// listinha.addTodoItem("Banho e tosa");
-// listinha.addTodoItem("Banho e tosa");
-// listinha.addTodoItem("Banho e tosa");
-// listinha.getTodoItems();
-// listinha.removeTodoItem("Banho e tosa");
-// listinha.removeTodoItem("Banho e tosa");
-// listinha.removeTodoItem("Banho e tosa");
-// listinha.removeTodoItem("Banho e tosa");
-exports.List = List;
+}();
+exports["default"] = List;
+var listinha = new List();
+listinha.addTodoItem("Banho e tosa");
+listinha.addTodoItem("Banho e tosa");
+listinha.addTodoItem("Banho e tosa");
+listinha.addTodoItem("Banho e tosa");
+listinha.getTodoItems();
+listinha.removeTodoItem("Banho e tosa");
+listinha.removeTodoItem("Banho e tosa");
+listinha.removeTodoItem("Banho e tosa");
+listinha.removeTodoItem("Banho e tosa");
