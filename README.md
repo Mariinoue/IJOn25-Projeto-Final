@@ -36,15 +36,22 @@ ODS
 ----------
 
 #### O TDAH e as realizações de tarefas
-- Dificuldade em se concentrar e se organizar.
-- Desafios para gerenciar suas tarefas diárias
-- Dificuldade em completar projetos e trabalhos de forma eficiente.
+
+ Dificuldade:
+- de se concentrar e se organizar.
+- para gerenciar as tarefas diárias
+- em completar projetos e trabalhos de forma eficiente.
   
 ![Captura de tela 2023-09-16 023214 (2)](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/021154d5-04e3-45b1-a211-56f788120f45)
 
 ### Solução
-- Nesse sentido, o gerenciamento de tarefas pode ser uma ferramenta valiosa para ajudar as pessoas com TDAH.
-- Pode gerenciar suas atividades diárias e manter-se organizadas.
+
+Nesse sentido, o gerenciamento de tarefas pode ser uma ferramenta valiosa para ajudar as pessoas com TDAH.
+
+#### Objetivo:
+
+- Gerenciar suas atividades diárias
+- Manter organizadas.
 - Melhorar foco e eficiência
   
 #### Produto
