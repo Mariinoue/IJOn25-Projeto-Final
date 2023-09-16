@@ -2,7 +2,6 @@
 
 
 ## 🚀 Sobre mim
-Eu sou desenvolvedora Front-End.
 
 Fui aluna da Reprograma - ON12 - Back-End. 
 
