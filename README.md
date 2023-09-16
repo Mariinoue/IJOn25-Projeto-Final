@@ -55,21 +55,23 @@ Insira um gif ou um link de alguma demonstração
 ## Uso/Exemplos
 
 ```javascript
- export  default class List {
+ export default class List {
   todoItems;
   constructor() {
     this.todoItems = [];
   }
 
+//--------------Funcão single responsability--------------
+//--------------Feature Adição----------------------------
   addTodoItem(todoItem) {
     this.todoItems.push(todoItem);
     console.table("todoItem populando array", this.todoItems);
   }
-
+//--------------Feature Remoção----------------------------
   removeTodoItem(todoItem) {
     this.todoItems = this.todoItems.filter((word) => word !== todoItem);
   }
-
+//--------------Feature Listagem de tarefas----------------------------
   getTodoItems() {
     console.table("getTodoItems", this.todoItems);
     return this.todoItems;
@@ -88,8 +90,9 @@ listinha.getTodoItems();
 
 listinha.removeTodoItem("Banho e tosa");
 //remover o item [ 'Arrumar bolsa da natação', 'Almoçar as 13:00', 'Tomar remédio' ]
+````
 
-
+```javascript
 export class PomodoroTimer {
   constructor(workDuration, breakDuration) {
     this.workDuration = workDuration;
@@ -152,9 +155,9 @@ export class PomodoroTimer {
 }
 
 const timer = new PomodoroTimer(25, 5); 
-
+````
 __________________________
-
+```javascript
         📁 projeto-to-list
           |
           |-  📁 src
@@ -179,7 +182,7 @@ __________________________
           |
           |
           📄 README.md  
-          
+````          
 ## Rodando localmente
 
 Clone o projeto
@@ -234,6 +237,7 @@ Testes unitários para testar as funções e clean code - cuidanado de nomear va
 ## Roadmap
 
 - Adicionar mais features
+- Criar telas
 - Tracking de emoção
 - Ansiedade
 - Planner mensal
