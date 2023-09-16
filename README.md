@@ -39,11 +39,12 @@ Tecnologias:
 
 
 ## Tema
+![Captura de tela 2023-09-16 023236](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/11a4e81c-e93b-4dda-8f63-0fa1eeb7119a)
 
-![Captura de tela 2023-09-16 022159](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/b85f9718-ce7b-4d98-8554-006a2ae55611)
-![Captura de tela 2023-09-16 023236](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/5c087866-b836-46d1-a0cc-08da93a4640e)
-![Captura de tela 2023-09-16 023254](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/697959fa-24bf-4e11-9061-dbd249763930)
-![Captura de tela 2023-09-16 023236-min](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/9a2c6b8c-4240-4ff1-bf7b-194722366394)
+
+![Captura de tela 2023-09-16 023214 (2)](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/021154d5-04e3-45b1-a211-56f788120f45)
+
+![Captura de tela 2023-09-16 023254 (2)](https://github.com/Mariinoue/IJOn25-Projeto-Final/assets/82849390/a6d0e84d-0b89-4bcf-b919-401b76ff930d)
 
 
 ## Demonstração
